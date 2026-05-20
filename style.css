@@ -308,7 +308,7 @@ main, .main-content {
 
 /* Estilo para el gran título de Bienvenida */
 .main-content h1 {
-    font-size: 2.8rem !important;      /* Aumenta el tamaño significativamente */
+    font-size: 5rem !important;      /* Aumenta el tamaño significativamente */
     font-weight: 700 !important;       /* Letra con presencia y grosor */
     color: #1a202c !important;         /* Gris oscuro casi negro, muy premium */
     letter-spacing: -0.03em !important;/* Junta ligeramente las letras para un look moderno */
@@ -340,4 +340,20 @@ main, .main-content {
     font-weight: 600 !important;
     color: #2d3748 !important;         /* Tono gris pizarra profesional */
     letter-spacing: -0.02em !important;
+}
+/* --- Ajustes Finales: Color Verde Agua y Espacio Entre Párrafos --- */
+
+/* Cambia el título principal de bienvenida a Verde Agua moderno */
+.main-content h1 {
+    color: #2b987b !important; /* El color verde agua característico de tu marca */
+}
+
+/* Añade una separación generosa abajo de cada párrafo de texto */
+.main-content p {
+    margin-bottom: 28px !important; /* Espacio extra entre bloques de texto */
+}
+
+/* Asegurar que el subtítulo también tenga buena separación */
+.main-content h1 + p {
+    margin-bottom: 35px !important;
 }
