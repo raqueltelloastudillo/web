@@ -357,3 +357,19 @@ main, .main-content {
 .main-content h1 + p {
     margin-bottom: 35px !important;
 }
+/* --- Estilos para el Banner de Gráficos Superior --- */
+.banner-analitico-contenedor {
+    width: 100%;
+    max-width: 850px;       /* Alineado con el ancho de tus bloques de texto */
+    margin: 0 auto 30px auto; /* Centra el bloque y le da espacio abajo antes del título */
+    display: flex;
+    justify-content: center;
+    overflow: hidden;       /* Evita cualquier deformación en los bordes */
+}
+
+.banner-analitico-img {
+    width: 100%;            /* Fuerza a la imagen a expandirse a todo el ancho disponible */
+    height: auto;           /* Mantiene la proporción original para que no se vea estirada */
+    display: block;
+    object-fit: contain;    /* Garantiza que la ilustración se muestre completa sin recortes */
+}
