@@ -1,0 +1,119 @@
+/* Configuración General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f7f9fa;
+    color: #333;
+}
+
+/* Contenedor Flexbox para dividir Pantalla Principal y Barra Lateral */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sección de la Izquierda (Contenido) */
+.main-content {
+    flex: 3;
+    padding: 40px;
+}
+
+.graphics-placeholder {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    opacity: 0.6; /* Simula los iconos de fondo gris de la imagen */
+}
+
+.graphic {
+    font-size: 14px;
+    text-align: center;
+    border: 1px dashed #ccc;
+    padding: 20px;
+    width: 30%;
+}
+
+.welcome-text h1 {
+    color: #2b987b; /* Color verde de la imagen */
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.welcome-text h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Barra Lateral Derecha */
+.sidebar {
+    flex: 1;
+    background-color: #2b987b; /* Fondo verde característico */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.profile-box {
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Hace la foto circular */
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 15px;
+}
+
+.sidebar h2 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.sidebar .subtitle {
+    font-style: italic;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Menú de Navegación Lateral */
+.menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto; /* Empuja el contacto hacia abajo */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    width: 100%;
+    transition: background 0.3s;
+    font-size: 0.95rem;
+}
+
+.menu a:hover {
+    background-color: #237a63; /* Efecto hover más oscuro */
+}
+
+/* Contacto */
+.contact-info {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 15px;
+    width: 80%;
+}
