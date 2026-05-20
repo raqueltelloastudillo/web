@@ -357,19 +357,24 @@ main, .main-content {
 .main-content h1 + p {
     margin-bottom: 35px !important;
 }
-/* --- Estilos para el Banner de Gráficos Superior --- */
+/* --- Corrección del Banner Superior: Estilo Compacto --- */
 .banner-analitico-contenedor {
     width: 100%;
-    max-width: 850px;       /* Alineado con el ancho de tus bloques de texto */
-    margin: 0 auto 30px auto; /* Centra el bloque y le da espacio abajo antes del título */
+    max-width: 850px;           /* Se alinea exactamente al ancho de tu texto */
+    height: 140px;              /* ¡CLAVE! Limitamos la altura para que no sea gigante */
+    margin: 0 auto 25px auto;   /* Centra el banner y da un espacio prudente antes del título */
+    overflow: hidden;           /* Esconde cualquier exceso de la imagen */
+    border-radius: 8px;         /* Le da esquinas ligeramente redondeadas para un look moderno */
     display: flex;
+    align-items: center;        /* Centra el contenido verticalmente */
     justify-content: center;
-    overflow: hidden;       /* Evita cualquier deformación en los bordes */
 }
 
 .banner-analitico-img {
-    width: 100%;            /* Fuerza a la imagen a expandirse a todo el ancho disponible */
-    height: auto;           /* Mantiene la proporción original para que no se vea estirada */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* Se adapta perfectamente al recuadro sin deformar los gráficos */
+    object-position: center;    /* Centra la visualización de la imagen */
     display: block;
-    object-fit: contain;    /* Garantiza que la ilustración se muestre completa sin recortes */
+    opacity: 0.85;              /* La hace un poco más suave para que combine con el diseño */
 }
