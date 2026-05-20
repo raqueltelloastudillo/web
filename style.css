@@ -606,3 +606,60 @@ main, .main-content {
 .menu a:hover {
     color: #ffffff !important;           /* Iluminación al pasar el cursor */
 }
+/* ===================================================
+   CORRECCIÓN DEL BANNER SUPERIOR (ACORTAR LARGO/ALTURA)
+   =================================================== */
+
+/* Forzamos al contenedor de tu imagen a actuar como una franja horizontal compacta */
+.banner-analitico-contenedor {
+    width: 100% !important;
+    max-width: 850px !important;       /* Alineado al ancho ideal de lectura */
+    height: 180px !important;          /* Reducción drástica de la altura */
+    overflow: hidden !important;       /* Recorta lo que sobresalga de la imagen */
+    margin: 20px auto 30px auto !important;
+    border-radius: 12px !important;    /* Bordes suavemente redondeados */
+    display: block !important;
+}
+
+/* Hacemos que la imagen se adapte perfectamente dentro de ese espacio recortado */
+.banner-analitico-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;      /* Se estira proporcionalmente tipo banner */
+    object-position: center !important;/* Se centra la composición visual */
+}
+
+
+/* ===================================================
+   MAXIMIZAR CONTRASTE DE TEXTOS (COLORES OSCUROS)
+   =================================================== */
+
+/* Título de Bienvenida ("¡Bienvenido a mi portafolio!") */
+.welcome-text h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 2.8rem !important;
+    font-weight: 800 !important;
+    color: #0c362b !important;         /* Verde petróleo muy oscuro y elegante (Alto contraste) */
+    margin-bottom: 15px !important;
+}
+
+/* Subtítulo ("Transformo datos complejos...") */
+.welcome-text h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: #1a1a1a !important;         /* Casi negro para una legibilidad perfecta e inmediata */
+    line-height: 1.4 !important;
+    margin-bottom: 20px !important;
+    border-bottom: none !important;    /* Evita líneas cruzadas innecesarias */
+    padding-bottom: 0 !important;
+}
+
+/* Párrafo de descripción ("Analista de Datos desde 2011...") */
+.welcome-text p {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;       /* Agrega un poco de grosor al trazo de la letra */
+    color: #2c3e50 !important;         /* Gris azulado oscuro de alta densidad (Fácil de leer) */
+    line-height: 1.6 !important;
+}
