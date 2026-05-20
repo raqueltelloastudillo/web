@@ -296,3 +296,48 @@ main, .main-content {
 .skills-section, .herramientas-seccion {
     margin-top: 25px !important;     /* Corta la distancia superior al 50% */
 }
+/* --- Modernización de Tipografías, Tamaños y Colores Grises --- */
+
+/* Importa una fuente moderna y minimalista desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Aplicar la tipografía general a todo el contenido principal */
+.main-content {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Estilo para el gran título de Bienvenida */
+.main-content h1 {
+    font-size: 2.8rem !important;      /* Aumenta el tamaño significativamente */
+    font-weight: 700 !important;       /* Letra con presencia y grosor */
+    color: #1a202c !important;         /* Gris oscuro casi negro, muy premium */
+    letter-spacing: -0.03em !important;/* Junta ligeramente las letras para un look moderno */
+    margin-bottom: 20px !important;
+}
+
+/* Estilo para el subtítulo principal (Transformo datos complejos...) */
+.main-content h1 + p, 
+.main-content strong {
+    font-size: 1.4rem !important;      /* Subtítulo más grande y destacado */
+    color: #4a5568 !important;         /* Gris medio elegante */
+    line-height: 1.5 !important;       /* Interlineado cómodo */
+    font-weight: 500 !important;
+    margin-bottom: 25px !important;
+}
+
+/* Estilo para los párrafos de texto (Analista de datos desde 2011...) */
+.main-content p {
+    font-size: 1.15rem !important;     /* Texto de lectura un poco más grande */
+    color: #5a6578 !important;         /* Gris suave y moderno que descansa la vista */
+    line-height: 1.8 !important;       /* Mayor separación entre líneas para legibilidad */
+    font-weight: 400 !important;
+}
+
+/* Ajuste sutil para los títulos de las secciones (Herramientas, Proyectos) */
+.main-content h2 {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.9rem !important;
+    font-weight: 600 !important;
+    color: #2d3748 !important;         /* Tono gris pizarra profesional */
+    letter-spacing: -0.02em !important;
+}
