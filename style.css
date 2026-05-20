@@ -357,17 +357,25 @@ main, .main-content {
 .main-content h1 + p {
     margin-bottom: 35px !important;
 }
-/* --- Corrección del Banner Superior: Estilo Compacto --- */
+
+/* --- Corrección Definitiva: Banner Arriba del Todo en Bloque Único --- */
 .banner-analitico-contenedor {
-    width: 100%;
-    max-width: 850px;           /* Se alinea exactamente al ancho de tu texto */
-    height: 140px;              /* ¡CLAVE! Limitamos la altura para que no sea gigante */
-    margin: 0 auto 25px auto;   /* Centra el banner y da un espacio prudente antes del título */
-    overflow: hidden;           /* Esconde cualquier exceso de la imagen */
-    border-radius: 8px;         /* Le da esquinas ligeramente redondeadas para un look moderno */
-    display: flex;
-    align-items: center;        /* Centra el contenido verticalmente */
-    justify-content: center;
+    display: block !important;    /* Obliga al contenedor a ocupar toda la línea horizontal solo */
+    width: 100% !important;       /* Expande el bloque al ancho disponible */
+    max-width: 850px;             /* Alineado al ancho máximo de tu lectura */
+    height: 160px !important;     /* Altura fija y discreta para que no sea gigante */
+    margin: 0 auto 35px auto !important; /* Centra el banner y añade un espacio limpio abajo */
+    overflow: hidden;             /* Oculta los excedentes de la foto */
+    border-radius: 8px;           /* Bordes suavizados modernos */
+    clear: both !important;       /* Rompe cualquier alineación flotante previa */
+}
+
+.banner-analitico-img {
+    width: 100% !important;       /* Estira la imagen para cubrir el ancho de su caja */
+    height: 100% !important;      /* Rellena la altura asignada */
+    object-fit: cover !important; /* Se adapta al espacio sin estirarse ni distorsionarse */
+    object-position: center !important; /* Centra el contenido visualizado */
+    display: block !important;
 }
 
 .banner-analitico-img {
