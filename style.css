@@ -544,3 +544,65 @@ main, .main-content {
         width: 130px !important;
     }
 }
+/* ===================================================
+   AJUSTES DE LA BARRA LATERAL: CENTRADO Y ALTO CONTRASTE
+   =================================================== */
+
+/* 1. Forzar que todo el bloque de la barra lateral alinee sus elementos al centro */
+.sidebar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;       /* Centra la foto de perfil y textos */
+    text-align: center !important;        /* Centra las líneas de texto */
+    padding: 35px 20px !important;
+}
+
+/* 2. Asegurar el centrado de la caja interna de tu perfil */
+.profile-box {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* 3. Nombre: "Raquel Tello Astudillo" Centrado y Blanco Puro */
+.sidebar h2 {
+    color: #ffffff !important;           /* Máximo contraste contra el fondo verde */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 1.9rem !important;        /* Tamaño destacado y elegante */
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-top: 15px !important;
+    margin-bottom: 8px !important;
+    width: 100% !important;
+}
+
+/* 4. Cargo: "Analista de datos / Data Engineer" Más Grande y Visible */
+.sidebar .subtitle {
+    color: #ffffff !important;           /* Cambia el verde oscuro anterior por blanco brillante */
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif !important;
+    font-size: 1.25rem !important;       /* Letra notablemente más grande */
+    font-weight: 600 !important;         /* Mayor grosor para legibilidad inmediata */
+    text-align: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 35px !important;      /* Espacio libre antes del menú de enlaces */
+    display: block !important;
+    width: 100% !important;
+    line-height: 1.4 !important;
+}
+
+/* 5. Ajuste para los enlaces de navegación del menú inferior */
+.menu a {
+    color: #e0f2f1 !important;           /* Tono menta claro muy legible */
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    margin-bottom: 15px !important;
+    display: inline-block !important;
+    text-align: center !important;
+    transition: color 0.2s ease !important;
+}
+
+.menu a:hover {
+    color: #ffffff !important;           /* Iluminación al pasar el cursor */
+}
