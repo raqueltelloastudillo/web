@@ -623,8 +623,8 @@ main, .main-content {
 
 /* Hacemos que la imagen se adapte perfectamente dentro de ese espacio recortado */
 .banner-analitico-img {
-    width: 100% !important;
-    height: 100% !important;
+    width: 50% !important;
+    height: 280% !important;
     object-fit: cover !important;      /* Se estira proporcionalmente tipo banner */
     object-position: center !important;/* Se centra la composición visual */
 }
@@ -639,7 +639,7 @@ main, .main-content {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
     font-size: 2.8rem !important;
     font-weight: 800 !important;
-    color: #0c362b !important;         /* Verde petróleo muy oscuro y elegante (Alto contraste) */
+    color: #06aa7f !important;         /* Verde petróleo muy oscuro y elegante (Alto contraste) */
     margin-bottom: 15px !important;
 }
 
@@ -660,6 +660,15 @@ main, .main-content {
     font-family: 'Segoe UI', Roboto, Arial, sans-serif !important;
     font-size: 1.1rem !important;
     font-weight: 500 !important;       /* Agrega un poco de grosor al trazo de la letra */
-    color: #2c3e50 !important;         /* Gris azulado oscuro de alta densidad (Fácil de leer) */
+    color: #071e19 !important;         /* Gris azulado oscuro de alta densidad (Fácil de leer) */
     line-height: 1.6 !important;
+}
+/* Estilo específico para adaptar la nueva imagen del proyecto */
+.project-img-file {
+    width: 100% !important;
+    max-width: 180px !important;       /* Tamaño controlado para que encaje al lado del texto */
+    height: auto !important;
+    border-radius: 8px !important;     /* Bordes redondeados elegantes */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important; /* Suave sombra profesional */
+    display: block !important;
 }
