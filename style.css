@@ -417,3 +417,130 @@ main, .main-content {
     width: 32px !important;              /* Tamaño uniforme y nítido */
     height: 32px !important;
 }
+/* ===================================================
+   1. CONTROL DE LA FRANJA DE GRÁFICOS SUPERIORES
+   =================================================== */
+.baner, #baner, .banner-analitico-contenedor, div:has(> [alt*="Grafico"]) {
+    display: block !important;
+    float: left !important;
+    width: 140px !important;              /* Escala reducida y discreta para el borde */
+    height: auto !important;
+    margin: 10px 25px 15px 0 !important;
+    padding: 0 !important;
+}
+
+.baner img, #baner img, [alt*="Grafico"] {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+}
+
+/* ===================================================
+   2. DISEÑO HORIZONTAL EN DOS COLUMNAS PARA PROYECTOS
+   =================================================== */
+.projects-section {
+    max-width: 850px !important;          /* Comparte el mismo ancho y alineación superior */
+    margin: 60px auto 80px auto !important;
+    padding: 0 20px !important;
+    text-align: left !important;          /* Título alineado hacia la izquierda */
+}
+
+.projects-section h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: #1a5646 !important;            /* Tu color verde de identidad corporativa */
+    margin-bottom: 30px !important;
+}
+
+/* Contenedor flexible */
+.projects-container {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Tarjeta contenedora principal en formato fila */
+.project-card-horizontal {
+    display: flex !important;
+    flex-direction: row !important;       /* Coloca los elementos de lado a lado */
+    align-items: center !important;       /* Alineación vertical perfecta */
+    background-color: #ffffff !important;
+    border-radius: 12px !important;
+    padding: 25px !important;
+    gap: 45px !important;                 /* Espacio generoso de separación interna */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Columna de la Imagen (Izquierda) */
+.project-media-box {
+    flex: 0 0 220px !important;           /* Ancho fijo para emular tu ejemplo de Tableau */
+    max-width: 220px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.project-thumb-img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 6px !important;
+}
+
+/* Columna de los Textos (Derecha) */
+.project-text-box {
+    flex: 1 !important;                   /* Toma el espacio restante con fluidez */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+
+.project-text-box h3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: 1.35rem !important;
+    color: #222222 !important;
+    margin: 0 !important;
+    font-weight: 700 !important;
+}
+
+.project-text-box p {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif !important;
+    font-size: 1.05rem !important;
+    color: #555555 !important;
+    line-height: 1.6 !important;
+    margin: 0 0 8px 0 !important;
+}
+
+/* Enlace de acción inferior */
+.project-action-link {
+    display: inline-block !important;
+    align-self: flex-start !important;    /* El botón se ajusta al tamaño de su texto */
+    font-family: 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    color: #2b987b !important;            /* Verde medio */
+    text-decoration: none !important;
+    border-bottom: 2px solid transparent !important;
+    transition: all 0.2s ease !important;
+}
+
+.project-action-link:hover {
+    color: #1a5646 !important;
+    border-bottom: 2px solid #1a5646 !important;
+}
+
+/* Regla responsiva para pantallas pequeñas de teléfonos */
+@media (max-width: 650px) {
+    .project-card-horizontal {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 20px !important;
+    }
+    .project-media-box {
+        max-width: 100% !important;
+        width: 130px !important;
+    }
+}
