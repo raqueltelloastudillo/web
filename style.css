@@ -281,3 +281,18 @@ body {
 .proyecto-enlace:hover {
     text-decoration: underline;
 }
+/* --- Reducción del espacio en blanco de la sección principal --- */
+main, .main-content {
+    padding-top: 20px !important;    /* Reduce el espacio superior interno */
+    padding-bottom: 20px !important; /* Reduce el espacio inferior interno */
+}
+
+#inicio {
+    margin-bottom: 20px !important;  /* Reduce la separación con la sección de abajo */
+    padding-bottom: 10px !important;
+}
+
+/* Ajuste para que la sección de habilidades suba más */
+.skills-section, .herramientas-seccion {
+    margin-top: 25px !important;     /* Corta la distancia superior al 50% */
+}
