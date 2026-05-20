@@ -213,65 +213,71 @@ body {
     font-weight: 500;
 }
 
-/* --- Sección de Proyectos --- */
-.projects-section {
+/* --- Nueva Sección de Proyectos en Filas Horizontales --- */
+.proyectos-seccion {
     margin-top: 60px;
     padding-top: 20px;
 }
 
-.projects-subtitle {
-    color: #666;
-    margin-bottom: 25px;
-    font-size: 1.05rem;
+.proyectos-seccion h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
 }
 
-.projects-grid {
+.proyectos-contenedor {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Separación entre tarjetas de proyectos */
-    max-width: 800px;
+    gap: 50px; /* Espacio entre cada proyecto */
+    max-width: 850px;
 }
 
-.project-card {
-    background-color: white;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra sutil de fondo */
+/* Alinea la caja de la imagen a la izquierda y el texto a la derecha */
+.proyecto-fila {
     display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    border-left: 5px solid #2b987b; /* Línea decorativa verde al lado izquierdo */
+    align-items: center;
+    gap: 40px; /* Distancia entre el cuadro gris y el texto */
 }
 
-.project-icon {
-    font-size: 2rem;
-    background-color: #f0f7f4;
-    padding: 10px;
-    border-radius: 8px;
+/* Cuadro gris claro para la ilustración */
+.proyecto-caja-imagen {
+    width: 140px;
+    height: 140px;
+    background-color: #f4f7f6;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Evita que el cuadro cambie de tamaño */
 }
 
-.project-info h3 {
-    color: #2b987b;
-    font-size: 1.3rem;
-    margin-bottom: 8px;
+.proyecto-ilustracion {
+    font-size: 3.5rem;
 }
 
-.project-info p {
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
+/* Contenedor del texto del proyecto */
+.proyecto-detalles h3 {
+    color: #333;
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
-.project-link {
-    color: #2b987b;
+.proyecto-detalles p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.proyecto-enlace {
+    color: #2b987b; /* El verde característico de tu sitio */
     text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: color 0.3s;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: inline-block;
 }
 
-.project-link:hover {
-    color: #1c6652; /* El enlace se oscurece al pasar el cursor */
+.proyecto-enlace:hover {
     text-decoration: underline;
 }
