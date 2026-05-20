@@ -366,40 +366,54 @@ main, .main-content {
     margin-top: 20px !important;
 }
 
-/* 2. Contenedor de la imagen a la izquierda */
-.banner-analitico-contenedor {
-    display: block !important;
-    float: left !important;         /* Alinea el contenedor estrictamente a la izquierda del texto */
-    width: 280px !important;        /* Ancho ideal para que luzca sin apretar el título */
-    height: auto !important;        /* ¡CLAVE! Deja que la altura se calcule completa y natural */
-    margin: 10px 30px 20px 0 !important; /* Separa la imagen del texto a su derecha y abajo */
-    overflow: hidden;
-    border-radius: 12px;            /* Bordes suavizados estéticos */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sutil sombra profesional */
+/* --- Alineación Unificada: Margen Izquierdo de Herramientas y Habilidades --- */
+
+/* 1. Contenedor principal de la sección: Adopta la misma alineación que la bienvenida */
+#herramientas, #habilidades, .skills-section, section:has(#herramientas) {
+    max-width: 850px !important;         /* El mismo ancho del bloque de lectura superior */
+    margin: 50px auto 40px auto !important; /* El 'auto' en los lados centra el bloque idénticamente */
+    padding: 0 20px !important;          /* Colchón de seguridad para pantallas pequeñas */
+    text-align: left !important;         /* Alinea el título a la izquierda, igual que arriba */
 }
 
-/* 3. Estilo de la imagen para máxima claridad y nitidez */
-.banner-analitico-img {
+/* 2. Formato del título "Herramientas y habilidades" alineado a la izquierda */
+#herramientas h2, #habilidades h2, .skills-section h2, h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 2.2rem !important;        /* Tamaño destacado y elegante */
+    font-weight: 700 !important;
+    color: #1a5646 !important;           /* Tu color verde oscuro de identidad */
+    margin-bottom: 35px !important;
+    text-align: left !important;         /* Forzado estricto al margen izquierdo */
+    letter-spacing: -0.5px !important;
+}
+
+/* 3. Ajuste de la lista para que fluya en columnas ordenadas desde el mismo margen */
+#herramientas ul, #habilidades ul, .skills-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important; /* Alinea los elementos al inicio izquierdo */
+    gap: 25px 40px !important;           /* Separación elegante entre filas y columnas */
+    padding: 0 !important;
+    list-style: none !important;         /* Quita viñetas residuales */
+    margin: 0 !important;                /* Evita desalineaciones internas */
     width: 100% !important;
-    height: auto !important;        /* Muestra la proporción vertical completa de tu foto */
-    object-fit: contain !important; /* Evita recortes bruscos; muestra la imagen al 100% de su forma */
-    display: block !important;
-    opacity: 1 !important;          /* Máxima opacidad para que los colores se vean claros */
 }
 
-/* 4. Asegurar que el texto fluya de forma ordenada al lado derecho */
-.welcome-section h1, h1 {
-    clear: none !important;         /* Permite que el título se acomode al lado de la foto */
-    margin-top: 0 !important;       /* Alinea el tope del título con el tope de la imagen */
+/* 4. Estilos individuales para cada ítem (SQL, Python, etc.) */
+#herramientas li, #habilidades li, .skill-item {
+    display: flex !important;
+    align-items: center !important;      /* Centra verticalmente el ícono con el texto */
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif !important;
+    font-size: 1.2rem !important;        /* Tamaño moderno y legible */
+    color: #333333 !important;
+    font-weight: 500 !important;
+    min-width: 240px !important;         /* Bloques proporcionales para que las columnas no se encimen */
+    padding: 5px 0 !important;
 }
-<section id="proyectos" class="projects-section">
-    <h2>Proyectos</h2>
-    
-    <div class="projects-container">
-        <div class="project-card">
-            <h3>Limpieza de datos de casos de Covid con SQL</h3>
-            <p>Exploración y procesamiento de datos globales sobre vacunación y tasas de mortalidad por COVID-19 utilizando consultas estructuradas.</p>
-            <a href="Proyecto_covid.sql" target="_blank" class="project-link">Ver script SQL →</a>
-        </div>
-    </div>
-</section>
+
+/* 5. Separación del ícono circular con el texto */
+#herramientas li img, #habilidades li img, .skill-item img {
+    margin-right: 15px !important;       /* Espacio entre el círculo verde y la palabra */
+    width: 32px !important;              /* Tamaño uniforme y nítido */
+    height: 32px !important;
+}
