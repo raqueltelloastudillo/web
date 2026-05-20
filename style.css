@@ -358,31 +358,48 @@ main, .main-content {
     margin-bottom: 35px !important;
 }
 
-/* --- Corrección Definitiva: Banner Arriba del Todo en Bloque Único --- */
+/* --- Ajuste de Ubicación: Imagen Nítida a la Izquierda y Espacio Superior --- */
+
+/* 1. Le damos espacio arriba a toda la sección para bajar y centrar la información */
+.main-content, main, .welcome-section, section:first-of-type {
+    padding-top: 60px !important;   /* Empuja todo el contenido hacia abajo dejando aire arriba */
+    margin-top: 20px !important;
+}
+
+/* 2. Contenedor de la imagen a la izquierda */
 .banner-analitico-contenedor {
-    display: block !important;    /* Obliga al contenedor a ocupar toda la línea horizontal solo */
-    width: 100% !important;       /* Expande el bloque al ancho disponible */
-    max-width: 850px;             /* Alineado al ancho máximo de tu lectura */
-    height: 160px !important;     /* Altura fija y discreta para que no sea gigante */
-    margin: 0 auto 35px auto !important; /* Centra el banner y añade un espacio limpio abajo */
-    overflow: hidden;             /* Oculta los excedentes de la foto */
-    border-radius: 8px;           /* Bordes suavizados modernos */
-    clear: both !important;       /* Rompe cualquier alineación flotante previa */
-}
-
-.banner-analitico-img {
-    width: 100% !important;       /* Estira la imagen para cubrir el ancho de su caja */
-    height: 100% !important;      /* Rellena la altura asignada */
-    object-fit: cover !important; /* Se adapta al espacio sin estirarse ni distorsionarse */
-    object-position: center !important; /* Centra el contenido visualizado */
     display: block !important;
+    float: left !important;         /* Alinea el contenedor estrictamente a la izquierda del texto */
+    width: 280px !important;        /* Ancho ideal para que luzca sin apretar el título */
+    height: auto !important;        /* ¡CLAVE! Deja que la altura se calcule completa y natural */
+    margin: 10px 30px 20px 0 !important; /* Separa la imagen del texto a su derecha y abajo */
+    overflow: hidden;
+    border-radius: 12px;            /* Bordes suavizados estéticos */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sutil sombra profesional */
 }
 
+/* 3. Estilo de la imagen para máxima claridad y nitidez */
 .banner-analitico-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;          /* Se adapta perfectamente al recuadro sin deformar los gráficos */
-    object-position: center;    /* Centra la visualización de la imagen */
-    display: block;
-    opacity: 0.85;              /* La hace un poco más suave para que combine con el diseño */
+    width: 100% !important;
+    height: auto !important;        /* Muestra la proporción vertical completa de tu foto */
+    object-fit: contain !important; /* Evita recortes bruscos; muestra la imagen al 100% de su forma */
+    display: block !important;
+    opacity: 1 !important;          /* Máxima opacidad para que los colores se vean claros */
 }
+
+/* 4. Asegurar que el texto fluya de forma ordenada al lado derecho */
+.welcome-section h1, h1 {
+    clear: none !important;         /* Permite que el título se acomode al lado de la foto */
+    margin-top: 0 !important;       /* Alinea el tope del título con el tope de la imagen */
+}
+<section id="proyectos" class="projects-section">
+    <h2>Proyectos</h2>
+    
+    <div class="projects-container">
+        <div class="project-card">
+            <h3>Limpieza de datos de casos de Covid con SQL</h3>
+            <p>Exploración y procesamiento de datos globales sobre vacunación y tasas de mortalidad por COVID-19 utilizando consultas estructuradas.</p>
+            <a href="Proyecto_covid.sql" target="_blank" class="project-link">Ver script SQL →</a>
+        </div>
+    </div>
+</section>
